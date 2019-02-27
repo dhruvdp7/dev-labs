@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.technologies-links{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+}
+.technologies-links:after {
+    background-color: #1d3763;
+    bottom: 200px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    z-index: -1;
+}
+
+.title{
+    line-height: 1.25;
+    letter-spacing: 2px;
+    color: #000;
+    text-transform: uppercase;
+    }
+
+.technology-link-item{
+display: block;
+    height: 250px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;}
+
+.technology-link-item:after {
+    background-image: linear-gradient(to right,#e7e67e 0px,#d1b65c 100%);
+    bottom: 0;
+    content: "";
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform .3s;
+    width: 120px;
+    z-index: -1;
+}
+
+.even:after{
+    transform: translateY(-20px);
+}
+
+.odd:after{
+    transform: translateY(20px);
+}
+
+.technology-link-item:hover::after{
+    transform: translateY(0px);}
+
+
+.item-imageContainer{
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 60px;
+    
+}
+
+.item-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.5s;
+    
+
+}
+
+.item-image:hover{
+    transform: scale(1.1,1.1);    
+}
+
+.item_title {
+    color: #fff;
+    font-size: 14px;
+    left: 20%;
+    letter-spacing: 1.8px;
+    line-height: 1.14;
+    margin: 0;
+    position: absolute;
+    right: 20%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 50%;
+    z-index: 2;
+   
+  
+}
+.item-image-shade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    background: #1d3763;
+    z-index: 1;
+   transition: all .5s ease;
+}
+.item-image-shade:hover{
+    opacity: .8;
+}
