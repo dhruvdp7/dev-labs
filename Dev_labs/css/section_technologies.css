@@ -14,18 +14,18 @@ h6 {
 }
 
 .technologies__title {
-    padding-top: 20px;
-    padding-left: 50px;
+    padding-top: 1.25rem;
+    padding-left: 3.125rem;
     font-size: 1.3rem;
-    line-height: 1.25;
     letter-spacing: 2px;
     color: #000;
     text-transform: uppercase;
 }
+
 .technologies__links {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 1.875rem;
     justify-content: center;
     position: relative;
 }
@@ -40,23 +40,24 @@ h6 {
     position: absolute;
 }
 
-
-
 .technologies__links--item {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    margin-bottom: 3.2rem;
     position: relative;
     z-index: 1;
 }
 
 .technologies__links--item:after {
     background-color: #f9ba48;
-    bottom: 0;
     content: "";
+    bottom: 0;
     left: 0;
     right: 0;
     top: 0;
-    width: 120px;
+    width: 7.5rem;
     transition: transform .3s;
     margin: auto;
     position: absolute;
@@ -75,10 +76,7 @@ h6 {
     transform: translateY(0px);
 }
 
-
 .item__tech {
-    height: 250px;
-    width: 260px;
     overflow: hidden;
 }
 
@@ -86,9 +84,9 @@ h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    padding: 8rem;
     transition: all .5s ease;
+    position: relative;
 }
 
 .item__tech--logo::after {
@@ -99,10 +97,8 @@ h6 {
     right: 0;
     bottom: 0;
     opacity: .5;
-    filter: alpha(opacity=50);
     background: #1d3763;
 }
-
 
 .technologies__links--item:hover .item__tech--logo {
     transform: scale(1.1, 1.1);
@@ -110,37 +106,49 @@ h6 {
 
 .item__tech--name {
     color: #fff;
-    font-size: 12px;
+    font-size: 0.75rem;
     left: 20%;
     letter-spacing: 1.8px;
-    
-    margin: 0;
     position: absolute;
     right: 20%;
     text-align: center;
-    
     text-transform: uppercase;
     top: 50%;
     z-index: 1;
-
 }
-
-
 
 .technologies__links--item:hover .item__tech--logo::after {
     opacity: .8;
 }
-
-@media (max-width: 1024px) {
-    .item-imageContainer {
-        height: 280px;
-        width: 215px;
+@media only screen and (max-width: 768px) {
+    
+    .item--resizer{
+        width: 100%;
     }
+       
+}
+@media only screen and (min-width: 768px) {
+    
+    .item--resizer{
+        width: 50%;
+    }
+       
+}
+@media only screen and (min-width: 992px) {
+    
+    .item--resizer{
+        width: 25%;
+    }
+       
+}
+@media only screen and (min-width: 1200px) {
+    
+    .item--resizer{
+        width: 25%;
+    }
+       
 }
 
-@media (max-width: 768px) {
-    .item-imageContainer {
-        height: 280px;
-        width: 320px;
-    }
-}
+
+   
+
